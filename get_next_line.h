@@ -6,7 +6,7 @@
 /*   By: hibouzid <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 11:02:26 by hibouzid          #+#    #+#             */
-/*   Updated: 2023/11/23 11:25:38 by hibouzid         ###   ########.fr       */
+/*   Updated: 2023/11/23 21:07:02 by hibouzid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 # include <stdio.h>
 
 # ifndef BUFFER_SIZE
-# define BUFFER_SIZE 100
+# define BUFFER_SIZE 42
 # endif
 int		ft_check(char *str, char c);
 char	*get_next_line(int fd);
