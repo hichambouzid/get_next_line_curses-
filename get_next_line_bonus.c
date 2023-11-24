@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.c                                    :+:      :+:    :+:   */
+/*   get_next_line_bonus.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hibouzid <hibouzid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/22 14:51:10 by hibouzid          #+#    #+#             */
-/*   Updated: 2023/11/24 16:21:52 by hibouzid         ###   ########.fr       */
+/*   Created: 2023/11/24 17:46:21 by hibouzid          #+#    #+#             */
+/*   Updated: 2023/11/24 17:54:17 by hibouzid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "get_next_line_bonus.h"
 
 char	*get_read(char *ptr, int fd)
 {
@@ -112,4 +112,9 @@ char	*get_next_line(int fd)
 	str = ft_line(ptr);
 	ptr = ft_cut(ptr);
 	return (str);
+}
+
+int main(int ac, char **av)
+{
+
 }
