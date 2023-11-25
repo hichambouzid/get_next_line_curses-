@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hibouzid <hibouzid@student.42.fr>          +#+  +:+       +#+        */
+/*   By: hibouzid <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/22 14:51:10 by hibouzid          #+#    #+#             */
-/*   Updated: 2023/11/24 16:21:52 by hibouzid         ###   ########.fr       */
+/*   Updated: 2023/11/25 10:18:51 by hibouzid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*get_read(char *ptr, int fd)
 	char	*str;
 
 	i = 1;
-	str = malloc(sizeof(char) * (BUFFER_SIZE + 1));
+	str = malloc(sizeof(char) * (BUFFER_SIZE) + 1);
 	if (!str)
 		return (NULL);
 	str[0] = 0;

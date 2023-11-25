@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line_bonus.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hibouzid <hibouzid@student.42.fr>          +#+  +:+       +#+        */
+/*   By: hibouzid <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/24 17:46:21 by hibouzid          #+#    #+#             */
-/*   Updated: 2023/11/24 17:54:17 by hibouzid         ###   ########.fr       */
+/*   Updated: 2023/11/25 10:15:46 by hibouzid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,8 @@ char	*get_read(char *ptr, int fd)
 	char	*str;
 
 	i = 1;
-	str = malloc(sizeof(char) * (BUFFER_SIZE + 1));
+	
+	str = malloc(sizeof(char) * (BUFFER_SIZE) + 1);
 	if (!str)
 		return (NULL);
 	str[0] = 0;
@@ -103,18 +104,24 @@ char	*ft_line(char *ptr)
 
 char	*get_next_line(int fd)
 {
-	static char	*ptr;
+	static char	*ptr[1024];
 	char		*str;
 
 	if (fd == -1 || BUFFER_SIZE <= 0)
 		return (NULL);
-	ptr = get_read(ptr, fd);
-	str = ft_line(ptr);
-	ptr = ft_cut(ptr);
+		
+	ptr[fd] = get_read(ptr[fd], fd);
+	str = ft_line(ptr[fd]);
+	ptr[fd] = ft_cut(ptr[fd]);
 	return (str);
 }
 
-int main(int ac, char **av)
-{
+// int main()
+// {
+// 	int fd = open("vaa", O_RDONLY);
+// 	char *str = get_next_line(fd);
+// 	printf("%s", str);
+// 	str = get_next_line(fd);
+// 		printf("%s", str);
 
-}
+// }
